@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="/static/bs/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/reg.css">
+    <script src="/static/js/jquery-3.1.1.js"></script>
+</head>
+<body>
+<h3>注册页面</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form>
+                <div class="form-group">
+                    <label for="id_user">用户名</label>
+                    {{ form_obj.user }}  <span class="pull-right"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="id_pwd">密码</label>
+                    {{ form_obj.pwd }} <span class="pull-right"></span>
+                </div>
+                <div class="form-group">
+                    <label for="id_repeat_pwd">确认密码</label>
+                    {{ form_obj.repeat_pwd }} <span class="pull-right"></span>
+                </div>
+                <div class="form-group">
+                    <label for="id_email">邮箱</label>
+                    {{ form_obj.email }} <span class="pull-right"></span>
+                </div>
+
+                <div class="form-group">
+
+                        <label for="avatar">头像&nbsp;&nbsp;&nbsp;<img id="avatar_img" width="60" height="60" src="http://127.0.0.1:8000/static/img/default.png" alt=""></label>
+                        <input type="file" id="avatar">
+                </div>
+                {% csrf_token %}
+                <input type="button" class="btn btn-primary" value="submit" id="reg_btn">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/static/js/reg.js">
+</script>
+
+</body>
+</html>
