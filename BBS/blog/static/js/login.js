@@ -13,6 +13,20 @@ $("#login_but").click(function () {
            "pwd":$("#pwd").val(),
            "valid_cod":$("#valid").val(),
            "csrfmiddlewaretoken":$("[name='csrfmiddlewaretoken']").val(),
+       },
+       success:function (data) {
+           var data=JSON.parse(data);
+           if (data.user){
+               // 登陆成功
+               location.href="/index/"
+
+           }
+           else {
+               $(".error").html(data.error_msg).css("color","red")
+               setTimeout(function () {
+                   $(".error").html("")
+               },1000)
+           }
        }
 
    })

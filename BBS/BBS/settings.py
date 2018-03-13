@@ -127,3 +127,6 @@ STATICFILES_DIRS = [
 # 用户默认上传文件位置
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR,"blog","media")
+
+AUTH_USER_MODEL = "blog.UserInfo"
+
