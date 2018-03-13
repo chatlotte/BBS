@@ -84,11 +84,9 @@ def register(request):
         form_obj=RegForm()
         return render(request,"reg.html",{"form_obj":form_obj})
 def index(request):
-
-
-
-
-    return
+    article_list = Article.objects.all()
+    print(article_list)
+    return render(request,"index.html",{"article_list":article_list})
 
 
 
