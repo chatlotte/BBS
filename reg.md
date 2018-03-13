@@ -1,5 +1,5 @@
 # 浅谈contentType = false  
-res.js文件位置   
+文件位置:项目/blog/static/js/reg.js   
 
 contentType简单说它是代表发送信息到服务器内容编码类型，通俗来说就是告诉服务器从浏览器提交过来得数据格式。  
 默认值为contentType = "application/x-www-form-urlencoded".在默认情况下，内容编码类型满足大多数情况。    
