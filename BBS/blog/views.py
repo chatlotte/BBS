@@ -87,6 +87,14 @@ def index(request):
     article_list = Article.objects.all()
     print(article_list)
     return render(request,"index.html",{"article_list":article_list})
+def log_out(request):
+    auth.logout(request)
+    return redirect("/index/")
+
+
+
+
+
 
 
 
